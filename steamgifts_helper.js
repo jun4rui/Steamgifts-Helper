@@ -168,7 +168,7 @@ function getGameList(inUrl) {
             if ($(this).find('.is-faded').length==1){
                 //console.log('GameUrl:',gameUrl,'SKIP!');
             }else{
-                console.log(/*gameName,gameUrl,gamePic,*/enterNum,enterPoint);
+                //console.log(/*gameName,gameUrl,gamePic,*/enterNum,enterPoint);
                 var tempHtmlStr	= '<div class="gameGiftBox"><div class="gameGiftUnit" style="background-image:url('+gamePic+');background-size:cover;" title="'+gameName+'" gname="'+gameName+'" genter="'+enterNum+'" gpoint="'+enterPoint+'" glink="'+gameUrl+'" gpic="'+gamePic+'"><div class="mask"></div><div class="tag">'+enterNum+'/'+enterPoint+'P</div><div class="name">'+gameName+'</div></div></div>';
                 $('#gameListPanel').append(tempHtmlStr);
             }
@@ -270,7 +270,7 @@ self.setInterval(function(){
                 }else{
                     //丢到待处理队列去
                     //TODO: 下次添加到队列中的时候先检查一下队列里面是否有这个玩意
-                    console.log("找到新的愿望单游戏: ",gameUrl);
+                    //console.log("找到新的愿望单游戏: ",gameUrl);
                     var tempGameList	= JSON.parse(localStorage.SGH_gameList);
                     tempGameList[tempGameList.length]	= {'link':gameUrl+'#OneClickEnter','pic':gamePic};
                     localStorage.SGH_gameList	= JSON.stringify(tempGameList);
